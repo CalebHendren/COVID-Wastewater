@@ -1,7 +1,7 @@
 from Bio import Entrez
 import xml.etree.ElementTree as ET
 
-Entrez.email = "your_email@example.com"  # Replace with your email address
+Entrez.email = "calebahendren@gmail.com"  # Replace with your email address
 
 
 def get_sra_accessions(query):
