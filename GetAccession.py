@@ -1,4 +1,3 @@
-#Retrieves accessions from metadata
 import os
 import re
 

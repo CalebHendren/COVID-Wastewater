@@ -11,7 +11,7 @@ os.makedirs(output_folder, exist_ok=True)
 with open(sra_accessions_file, "r") as file:
     accessions = [line.strip() for line in file.readlines()]
 
-#Remove duplicates
+# Remove duplicates
 unique_accessions = list(set(accessions))
 
 for acc in unique_accessions:
@@ -30,4 +30,6 @@ for acc in unique_accessions:
         fastq_dump_cmd = f"{sra_toolkit_path}/fastq-dump --split-files --gzip -O {fastq_folder} {sra_file}"
         print(f"Running fastq-dump for {acc}")
         subprocess.run(fastq_dump_cmd, shell=True)
-        print(f"Finished fastq-dump for {acc}")
+        print(f"Finished running fastq-dump for {acc}")
+
+fastq-dump --split-files --gzip --outdir /Users/caleb/Desktop/DataProjects/Python/COVID_Wastewater/FASTQ *.sra
